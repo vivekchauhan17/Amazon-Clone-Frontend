@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* ───────────── NAVBAR ───────────── */
+/* navbar */
 .navbar {
     height: 60px;
     background-color: #0f1111;
@@ -35,6 +35,7 @@
     border: 1.5px solid white;
 }
 
+/* box2*/
 .add-first {
     color: #cccccc;
     font-size: 0.86rem;
@@ -50,8 +51,6 @@
     display: flex;
     align-items: center;
 }
-
-/* ───────────── SEARCH BAR ───────────── */
 .nav-search {
     display: flex;
     justify-content: space-evenly;
@@ -94,6 +93,7 @@
     border: 2px solid orange;
 }
 
+/* BOX4 */
 span {
     font-size: 0.7rem;
 }
@@ -103,7 +103,7 @@ span {
     font-weight: 700;
 }
 
-/* ───────────── CART ───────────── */
+/* box6 – cart */
 .nav-cart i {
     font-size: 30px;
 }
@@ -126,7 +126,6 @@ span {
     white-space: nowrap;
 }
 
-/* ───────────── PANEL ───────────── */
 .panel {
     height: 40px;
     background-color: #222f3d;
@@ -151,13 +150,12 @@ span {
     font-weight: 700;
 }
 
-/* ───────────── HERO SECTION ───────────── */
 .hero-section {
     height: 350px;
     background-size: cover;
     background-image: url(hero_image.jpg);
-    background-position: center;
-    display: flex;
+    background-position: cover;
+    display: flex;              
     justify-content: center;
     align-items: flex-end;
 }
@@ -180,7 +178,6 @@ span {
     color: #007185;
 }
 
-/* ───────────── SHOP / BOX SECTION ───────────── */
 .shop-section {
     display: flex;
     flex-wrap: wrap;
@@ -213,7 +210,6 @@ span {
     color: #007185;
 }
 
-/* ───────────── FOOTER ───────────── */
 footer {
     margin-top: 15px;
 }
@@ -301,64 +297,36 @@ ul a:hover {
     padding-top: 5px;
 }
 
-/* ═══════════════════════════════════════
-   RESPONSIVE — TABLET  (≤ 1024px)
-═══════════════════════════════════════ */
 @media (max-width: 1024px) {
     .box {
         width: 45%;
     }
 }
 
-/* ═══════════════════════════════════════
-   RESPONSIVE — MOBILE  (≤ 768px)
-═══════════════════════════════════════ */
+
 @media (max-width: 768px) {
 
     .navbar {
         height: auto;
         padding: 8px 10px;
-        gap: 6px;
+        gap: 8px;
         justify-content: space-between;
-        flex-wrap: wrap;
     }
 
-    /* Row 1: Logo (left) --- Returns + Cart (right) */
     .nav-logo {
         width: 80px;
-        order: 1;
     }
 
-    .nav-return {
-        order: 1;
-        margin-left: auto;
-    }
-
-    .nav-cart {
-        order: 1;
-        margin-left: 10px;
-    }
-
-    /* Row 2: Search bar */
     .nav-search {
-        order: 2;
         width: 100%;
         max-width: 100%;
-        height: 34px;
-        margin-top: 4px;
+        order: 3;
+        margin-top: 6px;
     }
 
-    .search-input {
-        font-size: 16px;
+    .add-icon {
+        display: none;
     }
-
-    .search-icon {
-        font-size: 1rem;
-    }
-
-    .nav-signin  { display: none; }
-    .nav-address { display: none; }
-    .add-icon    { display: none; }
 
     .panel {
         height: auto;
@@ -416,9 +384,6 @@ ul a:hover {
     }
 }
 
-/* ═══════════════════════════════════════
-   RESPONSIVE — SMALL PHONES  (≤ 480px)
-═══════════════════════════════════════ */
 @media (max-width: 480px) {
 
     .search-select {
