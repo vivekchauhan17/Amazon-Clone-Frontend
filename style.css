@@ -118,14 +118,6 @@ span {
     white-space: nowrap;
 }
 
-.nav-logo,
-.nav-address,
-.nav-signin,
-.nav-return {
-    flex-shrink: 0;
-    white-space: nowrap;
-}
-
 .panel {
     height: 40px;
     background-color: #222f3d;
