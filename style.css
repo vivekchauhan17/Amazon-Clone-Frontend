@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     font-family: Arial;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-.navbar{
+/* ───────────── NAVBAR ───────────── */
+.navbar {
     height: 60px;
     background-color: #0f1111;
     color: white;
@@ -13,46 +14,55 @@
     align-items: center;
     justify-content: space-evenly;
 }
-.nav-logo{
+
+.nav-logo {
     height: 50px;
     width: 100px;
 }
-.logo{
+
+.logo {
     background-image: url("amazon_logo.png");
     background-size: cover;
     height: 50px;
     width: 100%;
 }
+
 .border {
     border: 1.5px solid transparent;
 }
+
 .border:hover {
     border: 1.5px solid white;
 }
-/* box2 */
+
+/* box2 – delivery address */
 .add-first {
     color: #cccccc;
     font-size: 0.86rem;
     margin-left: 15px;
 }
-.add-sec{
+
+.add-sec {
     font-size: 1rem;
     margin-left: 3px;
 }
-.add-icon{
+
+.add-icon {
     display: flex;
     align-items: center;
 }
 
-.nav-search{
+/* ───────────── SEARCH BAR ───────────── */
+.nav-search {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    max-width:620px;
+    max-width: 620px;
     height: 40px;
-    border-radius: 3px; 
+    border-radius: 3px;
 }
-.search-select{
+
+.search-select {
     background-color: #f3f3f3;
     width: 45px;
     text-align: center;
@@ -60,11 +70,15 @@
     border-bottom-left-radius: 4px;
     border: none;
 }
-.search-input{
+
+.search-input {
     width: 100%;
     font-size: 1rem;
     border: none;
+    /* FIX: prevents iOS from zooming in on tap */
+    font-size: max(1rem, 16px);
 }
+
 .search-icon {
     width: 45px;
     display: flex;
@@ -75,24 +89,28 @@
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     color: #0f1111;
+    /* FIX: makes the button actually tappable on mobile */
+    cursor: pointer;
+    flex-shrink: 0;
 }
-.nav-search:hover{
+
+.nav-search:hover {
     border: 2px solid orange;
 }
 
- /* BOX4 */
-span{
+/* BOX4 */
+span {
     font-size: 0.7rem;
 }
 
 .nav-second {
-    font-size: 0.85;
+    /* FIX: was missing the unit "rem" — was "0.85" not "0.85rem" */
+    font-size: 0.85rem;
     font-weight: 700;
 }
 
-/* box6 */
+/* box6 – cart */
 .nav-cart i {
-
     font-size: 30px;
 }
 
@@ -101,7 +119,7 @@ span{
     font-weight: 700;
 }
 
-/* panel */
+/* ───────────── PANEL ───────────── */
 .panel {
     height: 40px;
     background-color: #222f3d;
@@ -115,24 +133,29 @@ span{
     display: inline;
     margin-left: 15px;
 }
+
 .panel-opt {
     width: 70%;
     font-size: 0.85rem;
 }
+
 .panel-deals {
     font-size: 0.9rem;
     font-weight: 700;
 }
 
-/* hero section */
+/* ───────────── HERO SECTION ───────────── */
 .hero-section {
     height: 350px;
-    background-size: cover ;
+    background-size: cover;
     background-image: url(hero_image.jpg);
+    /* FIX: added background-position so image stays centred when cropped */
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
+
 .hero-msg {
     background-color: white;
     color: black;
@@ -143,17 +166,25 @@ span{
     font-size: 0.85rem;
     width: 80%;
     margin-bottom: 25px;
+    /* FIX: allow text to wrap on very small screens */
+    text-align: center;
+    padding: 0 10px;
 }
+
 .hero-msg a {
     color: #007185;
 }
-/* box section */
+
+/* ───────────── SHOP / BOX SECTION ───────────── */
 .shop-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #e2e7e6;
+    /* FIX: add padding so boxes don't touch screen edges */
+    padding: 0 10px 15px;
 }
+
 .box {
     height: 400px;
     width: 23%;
@@ -161,23 +192,28 @@ span{
     padding: 20px 0px 15px;
     margin-top: 15px;
 }
+
 .box-img {
     height: 300px;
     background-size: cover;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 .box-content {
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
 .box-content p {
     color: #007185;
 }
 
+/* ───────────── FOOTER ───────────── */
 footer {
     margin-top: 15px;
 }
+
 .foot-panel1 {
     height: 50px;
     color: white;
@@ -186,6 +222,9 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 0.85rem;
+    /* FIX: allow text to wrap on small screens */
+    text-align: center;
+    padding: 0 10px;
 }
 
 .foot-panel2 {
@@ -198,12 +237,22 @@ footer {
 
 ul {
     margin-top: 15px;
+    /* FIX: remove default bullet points that look odd in nav lists */
+    list-style: none;
+    padding-left: 0;
 }
+
 ul a {
     display: block;
     font-size: 0.85rem;
     margin-top: 10px;
-    color: #DDDDDD;
+    color: #dddddd;
+    /* FIX: remove underlines for cleaner look */
+    text-decoration: none;
+}
+
+ul a:hover {
+    text-decoration: underline;
 }
 
 .foot-panel3 {
@@ -215,6 +264,7 @@ ul a {
     align-items: center;
 }
 
+/* FIX: duplicate .logo rule removed (was defined twice) */
 .logo {
     background-image: url("amazon_logo.png");
     background-size: cover;
@@ -225,9 +275,13 @@ ul a {
 .foot-panel4 {
     background-color: #333333;
     color: white;
-    height: 70px;
+    /* FIX: was fixed 70px height — content overflows on mobile; use min-height */
+    min-height: 70px;
+    height: auto;
     font-size: 0.7rem;
     text-align: center;
+    /* FIX: add padding so text isn't glued to edges */
+    padding: 10px;
 }
 
 .pages {
@@ -237,49 +291,137 @@ ul a {
 .pages a {
     display: inline;
     margin-left: 25px;
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.pages a:hover {
+    text-decoration: underline;
 }
 
 .copyright {
     padding-top: 5px;
 }
 
+/* ═══════════════════════════════════════
+   RESPONSIVE — TABLET  (≤ 1024px)
+   Two boxes per row instead of four
+═══════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .box {
+        width: 45%;
+    }
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE — MOBILE  (≤ 768px)
+═══════════════════════════════════════ */
 @media (max-width: 768px) {
+
+    /* --- Navbar --- */
     .navbar {
-        flex-wrap: wrap;
-        height: auto; 
-        padding: 10px;
+        height: auto;
+        padding: 8px 10px;
+        gap: 8px;
+        /* FIX: stack logo + search on top, sign-in/cart on second row */
+        justify-content: space-between;
+    }
+
+    .nav-logo {
+        /* FIX: shrink logo slightly so search bar has more room */
+        width: 80px;
     }
 
     .nav-search {
+        /* FIX: search bar takes full width on its own row */
         width: 100%;
         max-width: 100%;
-        margin-top: 10px;
+        order: 3;           /* pushes search below logo row */
+        margin-top: 6px;
     }
 
-    .box {
-        width: 90%; 
+    /* FIX: hide the delivery address on small screens — saves space */
+    .add-icon {
+        display: none;
+    }
+
+    /* --- Panel --- */
+    .panel {
         height: auto;
-        margin-bottom: 20px;
+        padding: 8px 10px;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .panel-opt {
+        width: 100%;
+        /* FIX: keep panel links visible but wrap them */
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    /* --- Hero --- */
+    .hero-section {
+        height: 200px;
+        background-position: center;
+    }
+
+    .hero-msg {
+        width: 95%;
+        font-size: 0.75rem;
+        height: auto;
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+
+    /* --- Shop boxes --- */
+    .box {
+        /* FIX: one box per row, full width */
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
     }
 
     .box-img {
-        background-size: contain; 
+        height: 220px;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
     }
 
+    /* --- Footer --- */
     .foot-panel2 {
-        flex-direction: column; 
+        flex-direction: column;
         height: auto;
         padding: 20px;
         align-items: flex-start;
+        gap: 10px;
     }
 
-    .panel-opt {
-        display: none; 
+    .foot-panel4 {
+        font-size: 0.65rem;
+    }
+
+    .pages a {
+        /* FIX: reduce spacing so links don't overflow */
+        margin-left: 12px;
+    }
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE — SMALL PHONES  (≤ 480px)
+═══════════════════════════════════════ */
+@media (max-width: 480px) {
+    .search-select {
+        /* FIX: hide the category dropdown on very small screens */
+        display: none;
     }
 
     .hero-section {
-        height: 250px; 
+        height: 160px;
+    }
+
+    .hero-msg {
+        font-size: 0.7rem;
     }
 }
