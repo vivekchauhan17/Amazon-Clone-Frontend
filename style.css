@@ -35,7 +35,6 @@
     border: 1.5px solid white;
 }
 
-/* box2 – delivery address */
 .add-first {
     color: #cccccc;
     font-size: 0.86rem;
@@ -95,7 +94,6 @@
     border: 2px solid orange;
 }
 
-/* BOX4 */
 span {
     font-size: 0.7rem;
 }
@@ -105,7 +103,7 @@ span {
     font-weight: 700;
 }
 
-/* box6 – cart */
+/* ───────────── CART ───────────── */
 .nav-cart i {
     font-size: 30px;
 }
@@ -158,8 +156,8 @@ span {
     height: 350px;
     background-size: cover;
     background-image: url(hero_image.jpg);
-    background-position: cover;
-    display: flex;              
+    background-position: center;
+    display: flex;
     justify-content: center;
     align-items: flex-end;
 }
@@ -320,24 +318,47 @@ ul a:hover {
     .navbar {
         height: auto;
         padding: 8px 10px;
-        gap: 8px;
+        gap: 6px;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
+    /* Row 1: Logo (left) --- Returns + Cart (right) */
     .nav-logo {
         width: 80px;
+        order: 1;
     }
 
+    .nav-return {
+        order: 1;
+        margin-left: auto;
+    }
+
+    .nav-cart {
+        order: 1;
+        margin-left: 10px;
+    }
+
+    /* Row 2: Search bar */
     .nav-search {
+        order: 2;
         width: 100%;
         max-width: 100%;
-        order: 3;
-        margin-top: 6px;
+        height: 34px;
+        margin-top: 4px;
     }
 
-    .add-icon {
-        display: none;
+    .search-input {
+        font-size: 16px;
     }
+
+    .search-icon {
+        font-size: 1rem;
+    }
+
+    .nav-signin  { display: none; }
+    .nav-address { display: none; }
+    .add-icon    { display: none; }
 
     .panel {
         height: auto;
